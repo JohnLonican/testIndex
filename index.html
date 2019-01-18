@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.axis .domain {
+  display: none;
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+	<body>
+		<center><b>Topic 1 Cumulative Project Management Practice (PMP)</b></center><br/>
+<select id="topic1select" onChange="chart1()">
+	<option value=1>Strategic Emphasis</option>
+	<option value=2>Senior Management Review</option>
+	<option value=3>Project Planning Review</option>
+	<option value=4>Customer end user input</option>
+	<option value=5>Team Review</option>
+	<option value=6>Performance Review</option>
+	<option value=7>Communication systems</option>
+	<option value=8>Information Systems Review</option>
+	<option value=9>Organisational Review</option>
+</select>
+<div style="width: 100%; overflow: hidden;">
+    <div style="width: 600px; float: left;"> 
+<ol id="topic1list">
+	<li>test</li>
+</ol>
+    </div>
+    <div style="margin-left: 620px;"> <center><svg id="topic1svg" width="960" height="500"></svg></center> </div>
+</div>
+
+
+
+
+		<hr/>
+<center><b>Topic 2 Cumulative</b></center><br/>
+Conflict
+<div style="width: 100%; overflow: hidden;">
+    <div style="width: 600px; float: left;">
+<center><canvas id="topic2chartconflict" width="500" height="500"></canvas></center>
+    </div>
+    <div style="margin-left: 620px;height:500px;overflow:scroll">
+	<ul>
+		<li><span style="color: #e6194b">Laser: In Model OK Vendor not good </span></li>
+		<li><span style="color: #e6194b">Model: Not Well defined- inherited</span></li>
+		<li><span style="color: #3cb44b">RFID: Late start  </span></li>
+		<li><span style="color: #3cb44b">Unrealistic schedule</span></li>
+		<li><span style="color: #3cb44b">Unreasonable time lines for specific tasks</span></li>
+		<li><span style="color: #3cb44b">Unreasonable time lines for specific tasks</span></li>
+		<li><span style="color: #ffe119">Smart Torque: Minimal Benefit without planning </span></li>
+		<li><span style="color: #4363d8">Different project goals</span></li>
+		<li><span style="color: #4363d8">Misaligned metrics (financial control vs project goals)</span></li>
+		<li><span style="color: #4363d8">Goals- BHGE had a manuf. 100% process completion before fabrication but shell drove 60%</span></li>
+		<li><span style="color: #4363d8">Misaligned metrics (financial control vs project goals)</span></li>
+		<li><span style="color: #4363d8">Misaligned goals – unreasonable expectations</span></li>
+		<li><span style="color: #4363d8">Misaligned goals – unreasonable expectations</span></li>
+<li><span style="color: #f58231">Deadline- Engineering Schedule not integrated with Fab schedule</span></li><li><span style="color: #f58231">Manufacturing Processes (P1, P2, P3, P4)</span></li>
+
+<li><span style="color: #911eb4">Shell changed the construction manager which caused some conflicts in fabrication approaches </span></li>
+<li><span style="color: #911eb4">Lack of prioritization for available resources-> everything is urgent </span></li>
+<li><span style="color: #911eb4">Senior Management </span></li>
+<li><span style="color: #911eb4">Lack of prioritization for available resources-> everything is urgent </span></li>
+<li><span style="color: #911eb4">Organizational Chart, (ownership)</span></li>
+<li><span style="color: #46f0f0">Communication and department silos</span></li>
+<li><span style="color: #f032e6">Skill sets, Competencies</span></li>
+<li><span style="color: #f032e6">GE/BHGE Acquisition of Salof (unclear Roles & Responsibilities)</span></li>
+<li><span style="color: #fabebe">Disconnect on Quality Standards (Schedule Delay)</span></li>
+<li><span style="color: #fabebe">Volume of RFI/NCRs arising from construction of Train 1</span></li>
+<li><span style="color: #fabebe">Defects</span></li>
+<li><span style="color: #fabebe">Rework</span></li>
+<li><span style="color: #008080">The customer, Shell and Fabrication</span></li>
+
+'#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', 
+
+
+	</ul>
+	</div>
+</div>
+Morale
+<div style="width: 100%; overflow: hidden;">
+    <div style="width: 600px; float: left;">
+<center><canvas id="topic2chartmorale" width="500" height="500"></canvas></center>
+    </div>
+    <div style=""margin-left: 620px;height:500px;overflow:scroll">
+		<ul>
+			<li><span style="color: #e6194b">Support structure modifications to fit up ICP to MR Compressors</span></li>
+			<li><span style="color: #e6194b">Punch Tracking</span></li>
+			<li><span style="color: #3cb44b">Cost overrun, </span></li>
+			<li><span style="color: #3cb44b">No accountability </span></li>
+			<li><span style="color: #3cb44b">Disconnect on Quality Standards (Schedule Delay)</span></li>
+			<li><span style="color: #3cb44b">Surprises!</span></li>
+			<li><span style="color: #3cb44b">Change & Regulatory Requirements after design</span></li>
+			<li><span style="color: #3cb44b">Lack of unclear specs for a piece of equipment</span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+			<li><span style="color: #008080"></span></li>
+
+
+
+		</ul>
+
+	</div>
+</div>
+
+		<hr/>
+		Topic 3 Cumulative<br/>
+		<hr/>
+		Topic 4 Cumulative<br/>
+		<hr/>
+		Topic 5 Cumulative<br/>
+		<hr/>
+		Topic 6 Cumulative<br/>
+		<hr/>
+
+
+<script>
+function chart1() {
+	var n = $("#topic1select").val();
+
+	$("#topic1list").empty();
+
+	var questions = ['Were design goals attained?','Were the design goals clear?','Did the team create a goal statement that was specific, measurable, time based for design?','Did you understand how design would add value to the project?','Were design deadlines truly negotiated with project sponsors?','Did top management support design thinking throughout its duration?','Did I feel like the senior management team fully understood the design process?','','Was a detailed design plan developed for fabrication, construction and operation?','Was the core team involved in the development of the design plan?','Is there is a method for updating the design plan?', 'Did design have a proper budget?'];
+	var firstQNum = ((n-1)*4)%12;
+	var html = "";
+	for (k=firstQNum; k<=firstQNum+3; k++) {
+		if (questions[k] !== "") 
+		html+="<li>" + questions[k] + "</li>";
+	}
+	$("#topic1list").html(html);
+
+	
+
+
+	$("#topic1svg").empty();
+	var svg = d3.select("#topic1svg"),
+	    margin = {top: 20, right: 20, bottom: 30, left: 40},
+	    width = +svg.attr("width") - margin.left - margin.right,
+	    height = +svg.attr("height") - margin.top - margin.bottom,
+	    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	var x0 = d3.scaleBand()
+	    .rangeRound([0, width])
+	    .paddingInner(0.1);
+
+	var x1 = d3.scaleBand()
+	    .padding(0.05);
+
+	var y = d3.scaleLinear()
+	    .rangeRound([height, 0]);
+
+	var z = d3.scaleOrdinal()
+	    .range(["#348732", "#b7053d"]);
+
+	d3.csv("topic1_"+n+"data.csv", function(d, i, columns) {
+	  for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
+	  return d;
+	}, function(error, data) {
+	  if (error) throw error;
+
+	  var keys = data.columns.slice(1);
+
+	  x0.domain(data.map(function(d) { return d.State; }));
+	  x1.domain(keys).rangeRound([0, x0.bandwidth()]);
+	  y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
+
+	  g.append("g")
+	    .selectAll("g")
+	    .data(data)
+	    .enter().append("g")
+	      .attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; })
+	    .selectAll("rect")
+	    .data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
+	    .enter().append("rect")
+	      .attr("x", function(d) { return x1(d.key); })
+	      .attr("y", function(d) { return y(d.value); })
+	      .attr("width", x1.bandwidth())
+	      .attr("height", function(d) { return height - y(d.value); })
+	      .attr("fill", function(d) { return z(d.key); });
+
+	  g.append("g")
+	      .attr("class", "axis")
+	      .attr("transform", "translate(0," + height + ")")
+	      .call(d3.axisBottom(x0));
+
+	  g.append("g")
+	      .attr("class", "axis")
+	      .call(d3.axisLeft(y).ticks(null, "s"))
+	    .append("text")
+	      .attr("x", 2)
+	      .attr("y", y(y.ticks().pop()) + 0.5)
+	      .attr("dy", "0.32em")
+	      .attr("fill", "#000")
+	      .attr("font-weight", "bold")
+	      .attr("text-anchor", "start");
+
+	  var legend = g.append("g")
+	      .attr("font-family", "sans-serif")
+	      .attr("font-size", 10)
+	      .attr("text-anchor", "end")
+	    .selectAll("g")
+	    .data(keys.slice().reverse())
+	    .enter().append("g")
+	      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+	  legend.append("rect")
+	      .attr("x", width - 19)
+	      .attr("width", 19)
+	      .attr("height", 19)
+	      .attr("fill", z);
+
+	  legend.append("text")
+	      .attr("x", width - 24)
+	      .attr("y", 9.5)
+	      .attr("dy", "0.32em")
+	      .text(function(d) { return d; });
+	});
+}
+
+
+window.chartColors = {
+	red: 'rgb(255, 99, 132)',
+	orange: 'rgb(255, 159, 64)',
+	yellow: 'rgb(255, 205, 86)',
+	green: 'rgb(75, 192, 192)',
+	blue: 'rgb(54, 162, 235)',
+	purple: 'rgb(153, 102, 255)',
+	grey: 'rgb(201, 203, 207)'
+};
+var datax  = [7, 6, 6, 3, 10];
+var labelsx = [
+			'time issues',
+			'goal issues',
+			'spec issues',
+			'manufacture issues',
+			'???'
+		];
+
+conflictLabels = ['Model', 'Time', 'Tool', 'Goals', 'Process', 'Manager', 'Communication', 'Roles', 'Quality', 'Shell', 'Materials', 'Planning', 'Design'];
+conflictData = [2, 4, 1, 6, 2, 5, 1, 2, 4, 1, 2, 2, 7 ];
+moraleLabels = ['Technical', 'Leadership', 'Design', 'Organization Structure', 'Conflict and change', 'Environment', 'Schedule'];
+moraleData = [2, 6, 3, 3, 6, 3, 5];
+
+window.onload = function() {
+	chart1();
+	chart2("topic2chartconflict", conflictData, conflictLabels);
+	chart2("topic2chartmorale", moraleData, moraleLabels);
+
+	
+};
+
+function chart2(id, ch2data, ch2labels) {
+	var config = {
+		type: 'pie',
+		data: {
+			datasets: [{
+				data: ch2data,
+				backgroundColor: [
+					'#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075', '#808080', 
+				],
+				label: 'Dataset 1'
+			}],
+			labels: ch2labels
+		},
+		options: {
+			responsive: false,
+			maintainAspectRatio: false,
+		}
+	};
+	var ctx = document.getElementById(id).getContext('2d');
+	window.myPie = new Chart(ctx, config);
+	 $("#"+id).click( 
+		                function(evt){
+		                    var canvas = $("#myChart");
+		                    canvas.onclick = function(evt){
+	    var activePoints = window.myPie.getElementsAtEvent(evt);
+
+	    // => activePoints is an array of points on the canvas that are at the same position as the click event.
+	};
+					console.log(evt.activePoints);
+		                }
+		            );
+}
+
+
+</script>
+	</body>
+</html>
